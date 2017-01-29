@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Mods | SoggyMustache</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="../index.html" class="logo">
+									<span class="symbol"><img src="../images/logo.svg" alt="" /></span><span class="title">SoggyMustache</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="i../ndex.html">Home</a></li>
+							<li><a href="../mods.html">Mods</a></li>
+							<li><a href="../eula.html">EULA</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Achievements</h1>
+                            <p>This tutorial will teach you how to make simple achievements</p>                     
+                            <div id="main">
+                            <font size="6">First we need to register the achievement class in out common proxy</font>
+                            <pre><code>public class CommonProxy {
+            public void init(FMLInitializationEvent event)	
+	           {
+		TutorialAchievement.init(event);
+	           }
+    }</code></pre>
+                                <font size="6">The 'TutorialAchievement' is going to be in red so hover over it to create the class</font>
+                                <pre><code>          
+package net.soggymustache.tutorial.init.achieve;
+
+import net.minecraft.init.Items;
+import net.minecraft.stats.Achievement;
+import net.minecraftforge.common.AchievementPage;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+
+
+public class TransportationAchievement {
+	
+   <font color="limegreen">//this is where the new achievements are started</font>
+    public static Achievement achievementCraftPumpkinPie;
+    
+    
+	public static void init(FMLInitializationEvent event)
+	{
+        <font color="limegreen">//this is where all the achievements get their info</font>                              <font color="limegreen">//.setSpecial gives the achivement a different look to stand out></font>
+<font color="limegreen">//we can make the achivement need another before we can get it by changing (Achievement)null) to the achievement we want></font>
+        achievementCraftPumpkinPie = new Achievement("achievement.CraftPumpkinP", "PumpkinP", 1, -2, Items.pumpking_pie, (Achievement)null).registerStat().setSpecial;
+
+        <font color="limegreen">//this is where the achievements are registered</font>
+        AchievementPage.registerAchievementPage(new AchievementPage("Tutorial Achievements", new Achievement[]{achievementCraftPumpkinPie}));
+	}
+} 
+</code></pre>
+                           <font size="6">Now if we run the game our achievements will show up in our achievement page but we can't get them yet</font>
+                                <p>We now need to make a new class called 'CraftingEvent' or something like that</p>
+                                <pre><code>package net.soggymustache.tutorial.init.achieve.event;
+
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.PlayerEvent;
+import net.soggymustache.tutorial.init.achieve.TutorialAchievement;
+import net.minecraft.init.Items;
+
+public class CraftingEvent {
+	
+	@SubscribeEvent
+    <font color="limegreen">//instead of ItemCraftedEvent we can do ItemSmeltedEvent for when the player smelts something</font>
+	public void itemCrafted(PlayerEvent.ItemCraftedEvent e)
+	{
+		if(e.crafting.getItem().equals(Items.pumpkin_pie))
+		{
+			e.player.addStat(TutorialAchievement.achievementCraftPumpkinPie);
+		}
+	}
+	
+
+}
+</code></pre>
+                            <font size="6">Now that class will work but we need to register it</font>    
+                                <pre><code>public class CommonProxy {
+	public void preInit(FMLPreInitializationEvent event)
+	{
+		FMLCommonHandler.instance().bus().register(new CraftingEvent());
+	}
+    }
+	</code></pre>
+                         <font size="6">Now we can run the game craft a pumpkin pie and get an achievement</font>
+                                <br/>
+                                <a href="../modding.html">Back To Other Tutorials</a>
+    
+    
+                            </div>
+                        </div></div>
+<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h1>Contact</h1>
+                                    <h3>
+                                        Email : 'help@soggymustache.net'
+                                        <br/>
+                                        Direct : 'george@soggymustache.net'
+                                    </h3>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://twitter.com/SoggyMods" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.instagram.com/soggymustache/" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://github.com/0SoggyMustache0" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
+                                    <li><a href="https://www.youtube.com/channel/UCRixU-Jh-8ZzsaR07anuROQ" class="icon style2 fa-youtube"><span class="label">Youtube</span></a></li>
+									<li><a href="malto:help@soggymustache.net" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; SoggyMustache. All rights reserved</li>
+                                <li><a href="old/index.html">Click here to view old site</a></li>
+							</ul>
+						</div>
+					</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/skel.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>

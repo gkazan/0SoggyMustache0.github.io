@@ -1,0 +1,149 @@
+<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+</style>
+
+::-moz-selection { background: lightblue; }
+::selection { background: lightblue; }
+
+p{
+font-family: 'Montserrat', sans-serif;
+}
+a{
+font-family: 'Montserrat', sans-serif;
+}
+div{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-image: url("../images/bg.jpg");
+}
+
+ul.menu {
+    list-style-type: none;
+    margin: 20px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+
+.bot{
+    font-size: 20px;
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 1em;
+    margin-top: 0em;
+    color: darkblue;
+    font-family: monospace;
+    vertical-align: text-top;
+    text-align: center;
+    background-color: beige;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: skyblue;
+    color: black;
+}
+
+.article{
+    color: darkblue;
+    margin: 40px;
+    text-align: center;
+}
+
+h1.name{
+    font-size: 100px;
+    color: white;
+    margin: 0;
+    text-align: center;
+    font-family: monospace;
+}
+
+h3.name{
+    font-size: 50px;
+    color: white;
+    margin: 0;
+    text-align: center;
+    font-family: monospace;
+}
+
+h3.sec{
+    font-size: 50px;
+    color: dodgerblue;
+    margin: 0;
+    text-align: center;
+    font-family: monospace;
+}
+
+h2.sub{
+    font-size: 40px;
+    color: deepskyblue;
+    margin: 0;
+    text-align: center;
+    font-family: monospace;
+}
+
+
+.mod{
+    margin: 20px;
+    align-content: center;    
+}
+div.img {
+    margin: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 326px;
+    height: 353px;
+}
+
+div.img:hover {
+    border: 1px solid #777;
+    background-color: white;
+}
+
+div.img img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+    color: skyblue
+}
+a{
+    color: White;
+}
+a:hover{
+    color: skyblue;
+}
+a:active{
+    color: beige;
+}
+
+a.pat{
+    color: black;
+}
+a.pat:hover{
+    color: white;
+}
+a.pat:active{
+    color: beige;
+}
+
