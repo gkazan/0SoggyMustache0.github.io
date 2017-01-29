@@ -1,0 +1,133 @@
+body{
+    background-image: url("bgimages/4.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 2546px 1630px;
+}
+h1 {
+    color: whitesmoke;
+    font: courier;
+}
+h2 {
+    color: whitesmoke;
+    font: courier;
+}
+h3 {
+    color: whitesmoke;
+    font: courier;
+}
+p {
+    color: whitesmoke;
+    font: courier;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.button5 {
+    background-color: skyblue;
+    color: black;
+    border: 5px solid #555555;
+    border-radius: 12px;
+    width: 250px;
+    } /* Black */
+.button5:hover {
+    background-color: #555555;
+    color: white;
+    border: 5px solid skyblue;
+}
+#container
+{
+    height:50px;
+    width:100px;
+    position:relative;
+}
+
+#image
+{    
+    position:absolute;
+    left:0;
+    top:0;
+}
+#text
+{
+    z-index:50;
+    position:absolute;    
+    color:black;
+    font-size:24px;
+    font-weight:bold;
+    left:50px;
+    top:-10px;
+}
+#text2
+{
+    z-index:50;
+    position:absolute;    
+    color:black;
+    font-size:24px;
+    font-weight:bold;
+    left:150px;
+    top:-10px;
+}
+#text3
+{
+    z-index:50;
+    position:absolute;    
+    color:black;
+    font-size:24px;
+    font-weight:bold;
+    left:250px;
+    top:-10px;
+}
+#text4
+{
+    z-index:50;
+    position:absolute;    
+    color:black;
+    font-size:24px;
+    font-weight:bold;
+    left:350px;
+    top:-10px;
+}
+a {
+    color: black;
+}
+a:link {
+    color: black;
+}
+
+/* visited link */
+a:visited {
+    color: black;
+}
+
+/* mouse over link */
+a:hover {
+    color: steelblue;
+}
+
+/* selected link */
+a:active {
+    color: darkorange;
+}
+@media only screen and (max-width: 500px) {
+    p {
+           color: white;
+        font-family: courier;
+    font-size: 30px;
+    }
+        body {
+        background-color:lightblue;
+    }
+
+}
