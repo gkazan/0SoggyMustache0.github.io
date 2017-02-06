@@ -7,6 +7,7 @@
 
 p{
 font-family: 'Montserrat', sans-serif;
+color: aliceblue;
 }
 a{
 font-family: 'Montserrat', sans-serif;
@@ -26,6 +27,7 @@ ul.menu {
     overflow: hidden;
     background-color: #333;
 }
+
 
 
 .bot{
