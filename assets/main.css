@@ -5,6 +5,10 @@
 ::-moz-selection { background: lightblue; }
 ::selection { background: lightblue; }
 
+h3.white{
+    color: white;
+}
+
 p{
 font-family: 'Montserrat', sans-serif;
 color: dodgerblue;
@@ -35,7 +39,7 @@ ul.menu {
     clear: both;
     position: relative;
     z-index: 10;
-    height: 1em;
+    height: 1emvw;
     margin-top: 0em;
     color: darkblue;
     font-family: monospace;
@@ -71,6 +75,15 @@ h1.name{
     font-size: 100px;
     font-size: 10vw;
     color: white;
+    margin: 0;
+    text-align: center;
+    font-family: monospace;
+}
+
+h2.contact{
+    font-size: 30px;
+    font-size: 3vw;
+    color: deepskyblue;
     margin: 0;
     text-align: center;
     font-family: monospace;
