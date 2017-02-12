@@ -71,6 +71,10 @@ li a:hover {
     text-align: center;
 }
 
+h1.white{
+    color: white;
+}
+
 h1.name{
     font-size: 100px;
     font-size: 10vw;
