@@ -51,6 +51,19 @@
           }, 100);
         })();
         </script>
+        <script type="text/javascript">
+            window.addEventListener('load', function()
+            {
+                if(window.ga && ga.create) 
+                {
+                    console.log('Google Analytics is loaded');
+                } 
+                else 
+                {
+                    window.location.replace("prevented.html");                    
+                }
+            }, false);
+        </script>
         
     </head>
     <body>

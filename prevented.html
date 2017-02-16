@@ -20,19 +20,30 @@
         
         <style>
         #TpKbzDYMvstf {
-        display: none;
-        margin-bottom: 30px;
-        padding: 20px 10px;
-        background: #D30000;
-        text-align: center;
-        font-weight: bold;
-        color: #fff;
-        border-radius: 5px;
+            display: none;
+            margin-bottom: 30px;
+            padding: 20px 10px;
+            background: #D30000;
+            text-align: center;
+            font-weight: bold;
+            color: #fff;
+            border-radius: 5px;
+        }
+        #ana {
+            display: none;
+            margin-bottom: 30px;
+            padding: 20px 10px;
+            background: #15851D;
+            text-align: center;
+            font-weight: bold;
+            color: #fff;
+            border-radius: 5px;
         }
         </style>
     
 
         <div id="TpKbzDYMvstf">
+<!--
           My website is made possible by displaying online advertisements to my visitors.<br>
           Please consider supporting me by disabling your ad blocker. Or donate on <a href="https://www.patreon.com/soggymods" class="pat" target="_blank">patreon.com/soggymods</a> or through PayPal <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input type="hidden" name="cmd" value="_s-xclick">
@@ -40,7 +51,14 @@
             ">
             <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
             <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+
             </form>
+-->
+            Advertisements are being blocked, please disable your ad blocker to view this site
+        </div>
+        
+        <div id="ana">
+           Google Analytics is being blocked, please disable your blocker to view this site 
         </div>
 
         <script>
@@ -58,7 +76,33 @@
         })();
         </script>
         
+        <script type="text/javascript">
+            window.addEventListener('load', function()
+            {
+                if(window.ga && ga.create) 
+                {
+                    console.log('Google Analytics is loaded');
+                   // window.location.replace("index.html");
+                } 
+                else 
+                {
+                    console.log('Google Analytics is not loaded');  
+                    document.getElementById('ana').style.display='block';
+                }
+
+                if(window.google_tag_manager)
+                {
+                    console.log('Google Tag Manager is loaded');
+                }
+                else
+                {
+                    console.log('Google Tag Manager is not loaded');
+                }
+            }, false);
+        </script>
+        
     </head>
+    
     <body>
         <div class="container">
             <div class="row">
@@ -69,23 +113,13 @@ function googleTranslateElementInit() {
 </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         </center>
                  <div class="page-header">
-                    <h3 class="name">Please Remove Your Ad Blocker :)</h3>
+                    <h3 class="name">Please disable service blockers :)</h3>
                 </div>
-                
-                    <h1 class="white">Hi there I have redirected you to this page because I have detected your ad blocker. Click the button below to return back to my site once you disable
-                the ad blocker, if you don't disable the ad blocker you will just be sent here again. If you are wondering why I am making you disable your ad blocker it is because my domain is not free and I need to some how pay for it.
-                </h1>
-                <br/>
-                                    <a href="index.html"><button type="button" class="btn btn-default btn-lg">Back To Home</button></a>
-                <br/>
-                <br/>
-                    <h1 class="white">It takes less then 10 seconds to blacklist my site and adfocus (the website keeping this page up), 5 seconds of you looking at an advertisement for a free mod, thats it just 5 seconds to help out a modder.</h1>
-                <br/>
-                <br/>
-                <font color="black"><code>If you are unaware of how to disable your ad blocker, left click the icon for it in the top right of chrome and click pause AdBlock</code></font>
-                <br/>
+                <center>
+                    <h1 class="white">You cannot return home until the blockers are disabled.</h1>
+              <a href="index.html">  <button type="button" class="btn btn-default btn-lg">Home</button></a>
+                    </center>
                   <br/>
-                <h2 class="bot">(C) 2017 George Kazanjian, All Rights Reserved</h2>
             </div>
         </div>
                         <script>
