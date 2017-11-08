@@ -1,0 +1,76 @@
+package mod.goony.blocks;
+
+import javax.annotation.Nullable;
+
+import net.minecraft.block.BlockBush;
+import net.minecraft.block.BlockOre;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
+
+/**
+ * The Diamond Plant Example
+ * @author George Kazanjian
+ */
+public class BlockPlant extends BlockBush implements net.minecraftforge.common.IShearable
+{
+	//Axis Align Bounding Box = the hit box of the block
+    protected static final AxisAlignedBB DEAD_BUSH_AABB = new AxisAlignedBB(0.09999999403953552D, 0.0D, 0.09999999403953552D, 0.8999999761581421D, 0.800000011920929D, 0.8999999761581421D);
+
+    protected BlockPlant()
+    {
+        super(Material.VINE);
+    }
+
+    //Get the bounds we set to our custom at the top
+    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
+    {
+        return DEAD_BUSH_AABB;
+    }
+    
+    //Where the block can be placed
+    protected boolean canSustainBush(IBlockState state)
+    {
+    	//If it is a varient of stone or is ANY BLOCK that EXTENDS ORE
+        return state.getBlock() == Blocks.STONE || state.getBlock() instanceof BlockOre;
+    }
+
+    //Can be replaced like that, grass tall is a good example
+    public boolean isReplaceable(IBlockAccess worldIn, BlockPos pos)
+    {
+        return true;
+    }
+
+    //Called when broken, if the player has shears drop our block
+    public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, @Nullable TileEntity te, ItemStack stack)
+    {
+        if (!worldIn.isRemote && stack.getItem() == Items.SHEARS)
+        {
+            spawnAsEntity(worldIn, pos, new ItemStack(Blocks.DIAMOND_BLOCK, 1, 0));
+        }
+        else
+        {
+            super.harvestBlock(worldIn, player, pos, state, te, stack);
+        }
+    }
+
+    //REQUIRED BY FORGE/MC
+    @Override 
+    public boolean isShearable(ItemStack item, net.minecraft.world.IBlockAccess world, BlockPos pos){ 
+    	return true; 
+    }
+    
+    @Override
+    public java.util.List<ItemStack> onSheared(ItemStack item, net.minecraft.world.IBlockAccess world, BlockPos pos, int fortune)
+    {
+        return java.util.Arrays.asList(new ItemStack(Blocks.DIAMOND_BLOCK));
+    }
+}
