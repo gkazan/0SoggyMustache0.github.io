@@ -43,34 +43,6 @@
             </form>
         </div>
 
-        <script>
-        (function(){
-          var test = document.createElement('div');
-          test.innerHTML = '&nbsp;';
-          test.className = 'adsbox';
-          document.body.appendChild(test);
-          window.setTimeout(function() {
-            if (test.offsetHeight === 0) {
-                document.getElementById('TpKbzDYMvstf').style.display='block';
-                window.location.replace("prevented.html");
-            }
-            test.remove();
-          }, 100);
-        })();
-        </script>
-         <script type="text/javascript">
-            window.addEventListener('load', function()
-            {
-                if(window.ga && ga.create) 
-                {
-                    console.log('Google Analytics is loaded');
-                } 
-                else 
-                {
-                    window.location.replace("prevented.html");                    
-                }
-            }, false);
-        </script>
     </head>
     <body>
         <div class="container">
