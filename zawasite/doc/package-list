@@ -4,11 +4,15 @@ mod.zawa.entity
 mod.zawa.entity.ai
 mod.zawa.entity.base
 mod.zawa.entity.data
+mod.zawa.entity.egg
 mod.zawa.entity.fying
 mod.zawa.entity.item
 mod.zawa.entity.land
 mod.zawa.entity.npc
+mod.zawa.entity.painting
 mod.zawa.entity.projectile
+mod.zawa.entity.toy
+mod.zawa.entity.vehicle
 mod.zawa.entity.water
 mod.zawa.event
 mod.zawa.gui
@@ -22,7 +26,7 @@ mod.zawa.init.blocks.type
 mod.zawa.init.items
 mod.zawa.init.items.type
 mod.zawa.proxy
-mod.zawa.struct
 mod.zawa.util
 mod.zawa.world.biomes
 mod.zawa.world.biomes.gen
+mod.zawa.world.struct
