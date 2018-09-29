@@ -1,186 +1,99 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="assets/main.css">
-        <title>WMATM Vehicles | SoggyMustache</title>
+	<head>
+		<title>Soggy Mustache</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
         <link rel="shortcut icon" href="favicon.ico">
         <meta name="description" content="SoggyMustache's Majestic Website">
         <meta name="keywords" content="SoggyMustache,Mods,Minecraft Mods,1.9,1.10,1.8,1.7.10">
         <meta name="author" content="George K. Kazanjian">
-        <meta http-equiv="X-UA-Compatible" content="IE=ed">
-        <meta name="viewport" content="width = device-width, initial-scale = 1">
-        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-                <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css'>
+	</head>
+	<body class="is-preload">
 
-        <style>
-            .carousel-inner > .item > img,
-            .carousel-inner > .item > a > img {
-              width: 70%;
-              margin: auto;
-            }
-        </style>
-        
-        <style>
-        #TpKbzDYMvstf {
-        display: none;
-        margin-bottom: 30px;
-        padding: 20px 10px;
-        background: #D30000;
-        text-align: center;
-        font-weight: bold;
-        color: #fff;
-        border-radius: 5px;
-        }
-        </style>
-    
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-        <div id="TpKbzDYMvstf">
-          My website is made possible by displaying online advertisements to my visitors.<br>
-          Please consider supporting me by disabling your ad blocker. Or donate on <a href="https://www.patreon.com/soggymods" target="_blank">patreon.com/soggymods</a> or through PayPal <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
-            ">
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-            </form>
-        </div>
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
 
-        <script>
-        (function(){
-          var test = document.createElement('div');
-          test.innerHTML = '&nbsp;';
-          test.className = 'adsbox';
-          document.body.appendChild(test);
-          window.setTimeout(function() {
-            if (test.offsetHeight === 0) {
-                document.getElementById('TpKbzDYMvstf').style.display='block';
-               // window.location.replace("prevented.html");
-            }
-            test.remove();
-          }, 100);
-        })();
-        </script>
-        
-    </head>
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="page-header">
-                    <h1 class="name">Soggy Mustache</h1>
-                </div>
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>SoggyMustache</strong></a>
+									<ul class="icons">
+										<li><a href="https://twitter.com/SoggyMods" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="https://github.com/0SoggyMustache0" class="icon fa-github"><span class="label">Github</span></a></li>
+									</ul>
+								</header>
 
-                <nav class="navbar navbar-inverse">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <a class="navbar-brand" href="index.html">SoggyMustache</a>
-                        </div>
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>WMATM Vehicles</h1>
+										</header>
+									</div>
+								</section>
+                                <p>
+Everyone needs to move around their world quickly, but horses and minecarts don't do the job or look cool, that's why we have made WMATM Vehicles. This mod adds in Cars, Planes, Bikes, Motorcycles and more, BUT they are all super customization there are over 1,000 customization combinations for some vehicles!, Besides customization we have worked very hard to make the vehicles realistic, if you drive off a cliff the engine will break and the car will eventually explode, we have also made the vehicles less prone to damage so if someone tries to kill your car they can't attack it.</p>
+                                <center> <a href="http://zipansion.com/49M1p" target="_blank"><button type="button" class="btn btn-default btn-lg">Download Here</button></a> </center>
+						</div>
+					</div>
 
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="mods.html">Mods</a></li>
-                                <li><a href="tools.html">Tools</a></li>
-                                <li><a href="projects.html">Other</a></li>
-                                <li><a href="tutorial.html">Tutorials</a></li>
-                                <li><a href="donor.html">Donors</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                                <li><a href="privacy.html">Privacy Policy</a></li>
-                                <li><a href="george/index.html">About Me</a></li>
-                                <li><a href="https://github.com/0SoggyMustache0" target="_blank">Github</a></li>
-                                <li><a href="https://twitter.com/SoggyMods" target="_blank">Twitter</a></li>
-                                <li><a href="https://minecraft.curseforge.com/members/Soggy_Mustache/projects" target="_blank">Curse</a></li>
-                                <li><a href="http://www.planetminecraft.com/member/soggy_mustache/" target="_blank">Planet Minecraft</a></li>
-                                <li><a href="https://www.patreon.com/soggymods" target="_blank">Patreon</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-                
-                 <div class="page-header">
-                    <h3 class="name">WMATM Vehicles</h3>
-                </div>
-                
-                <center>
-                <br/>
-                <font size="5px" color="white">
-                <img src="WMATMImages/wmatm_logo.png">
-                <br/>
-                    
-                    <br/>
-                    <br/>
-                    
-                    <center>
-                        <h2 class="sub">Description</h2>
-                        <p>Minecraft highly customizable vehicle mod</p>
-                        <P>Everyone needs to move around their world quickly, but horses and minecarts don't do the job or look cool, that's why we have made WMATM Vehicles. This mod adds in Cars, Planes, Bikes, Motorcycles and more, BUT they are all super customization there are over 1,000 customization combinations for some vehicles!, Besides customization we have worked very hard to make the vehicles realistic, if you drive off a cliff the engine will break and the car will eventually explode, we have also made the vehicles less prone to damage so if someone tries to kill your car they can't attack it.</P>
-                        <h2 class="sub">Downloads</h2>
-                        <br/>
-                            <a href="http://adfoc.us/33490963435816" target="_blank"><button type="button" class="btn btn-default btn-lg">1.10.2</button></a> 
-                            <a href="http://adfoc.us/33490963435816" target="_blank"><button type="button" class="btn btn-default btn-lg">1.10</button></a> 
-                            <a href="http://adfoc.us/33490963435814" target="_blank"><button type="button" class="btn btn-default btn-lg">1.9.4</button></a> 
-                            <a href="http://adfoc.us/33490963435814" target="_blank"><button type="button" class="btn btn-default btn-lg">1.9</button></a> 
-                            <a href="http://adfoc.us/33490963435813" target="_blank"><button type="button" class="btn btn-default btn-lg">1.8.9</button></a> 
-                            <a href="http://adfoc.us/33490963435813" target="_blank"><button type="button" class="btn btn-default btn-lg">1.8</button></a> 
-                        <br/>
-                        <br/>
-                        <h2 class="sub">Images</h2>
-                        <p>These images are from the 1.0.0 build more have likely been added since these were taken.</p>
-                        <br/>
-                        <div class="iframe-center" style="text-align:center"><span style="font-size:36px">Color Options</span></div>
-  
-                        <div class="spoiler" data-spoiler-title=""><br>
-                        <p><img src="http://soggymustache.net/WMATMImages/colors.png" width="933" height="123" alt=""></p>
-                 
-                        <br>
-                        <div class="iframe-center" style="text-align:center"><span style="font-size:36px">Decals</span></div>
-                       
-                        <div class="spoiler" data-spoiler-title=""><br>
-                        <div class="iframe-center" style="text-align:center"></div>
-                        <p><img src="http://soggymustache.net/WMATMImages/blue_flame.png" width="941" height="514" alt=""></p>
-                        <div class="iframe-center" style="text-align:center"><img src="http://soggymustache.net/WMATMImages/dragon.png" width="898" height="491" alt=""> <img src="http://soggymustache.net/WMATMImages/flame.png" width="946" height="516" alt=""> <img src="http://soggymustache.net/WMATMImages/heart.png" width="933" height="510" alt=""> <img src="http://soggymustache.net/WMATMImages/skull.png" width="933" height="510" alt=""> <img src="http://soggymustache.net/WMATMImages/sunflower.png" width="933" height="510" alt=""></div>
-                        </div>
-                        <br>
-                        <div class="iframe-center" style="text-align:center"><span style="font-size:36px">Toppers</span></div>
-                        <br>
-                        <div class="spoiler" data-spoiler-title=""><br>
-                        <p> <img src="http://soggymustache.net/WMATMImages/policesiren.png" width="933" height="510" alt="">  <img src="http://soggymustache.net/WMATMImages/redlight.png" width="933" height="510" alt=""> <img src="http://soggymustache.net/WMATMImages/star.png" width="933" height="510" alt=""></p>
-                        </div>
-                        <br>
-                        <div class="iframe-center" style="text-align:center"><span style="font-size:36px">Car Skins</span></div>
-                        <br>
-                        <div class="spoiler" data-spoiler-title=""><br>
-                        <p> <img src="http://soggymustache.net/WMATMImages/mcqueen.png" width="933" height="510" alt="">  <img src="http://soggymustache.net/WMATMImages/mint.png" width="933" height="510" alt=""> <img src="http://soggymustache.net/WMATMImages/pepermint.png" width="933" height="510" alt=""></p>
-                        </div>
-                        <br>
-                        <div class="iframe-center" style="text-align:center"><span style="font-size:36px">Car Mods</span></div>
-                        <br>
-                        <div class="spoiler" data-spoiler-title=""><br>
-                        <p><img src="http://soggymustache.net/WMATMImages/spoiler.png" width="900" height="" alt=""></p>
-                        </div>
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Home</a></li>
+										<li><a href="mods.html">Mods</a></li>
+										<li><a href="tools.html">Tools</a></li>
+										<li><a href="projects.html">Other</a></li>
+										<li><a href="donor.html">Donors</a></li>
+										<li><a href="contact.html">Contact</a></li>
+										<li><a href="/george/index.html">About</a></li>
+										<li><a href="https://minecraft.curseforge.com/members/Soggy_Mustache/projects">Curse</a></li>
+                                        <li><a href="http://www.planetminecraft.com/member/soggy_mustache/">Planet Minecraft</a></li>
+                                        <li><a href="https://github.com/0SoggyMustache0">Github</a></li>
+                                        <li><a href="https://twitter.com/SoggyMods">Twitter</a></li>
+                                        <li><a href="privacy.html">Privacy Policy</a></li>
+									</ul>
+								</nav>
 
-                    </center>
-                    <br/>
-        </font>
-        </center>
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Contact</h2>
+									</header>
+									<ul class="contact">
+										<li class="fa-envelope-o"><a href="mailto:george@soggymustache.net">george@soggymustache.net</a></li>
+										<li class="fa-address-book-o ">Discord: SoggyMustache#6693</li>
+									</ul>
+								</section>
 
-                  <br/>
-                <center>
-                            <a href="https://twitter.com/SoggyMods" target="_blank" class="icon-link round twitter fill"><i class="fa fa-twitter"></i></a>
-                            <a href="https://www.youtube.com/channel/UCRixU-Jh-8ZzsaR07anuROQ/videos" target="_blank" class="icon-link round youtube fill"><i class="fa fa-youtube"></i></a>
-                            <a href="https://github.com/0SoggyMustache0" target="_blank" class="icon-link round github fill"><i class="fa fa-github"></i></a>
-                            <a href="contact.html" class="icon-link round envelope fill"><i class="fa fa-envelope"></i></a>
-                            <a href="https://www.instagram.com/soggymustache/" target="_blank" class="icon-link round instagram fill"><i class="fa fa-instagram"></i></a>
-                    </center><br/>
-                <h2 class="bot">(C) 2017 George Kazanjian, All Rights Reserved</h2>
-            </div>
-        </div>
-                        <script>
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; SoggyMustache Development. All rights reserved. Minecraft is copyright Mojang AB and is not affiliated with this site</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+            <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -191,8 +104,5 @@
                             
         </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-        
-    </body>
+	</body>
 </html>
